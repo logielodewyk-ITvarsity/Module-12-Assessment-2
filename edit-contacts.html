@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href="fontAwesome/css/all.css" rel="stylesheet">
 </head>
 <body onload="getContact()">
     <div id="avatarImage"></div>
@@ -60,7 +62,7 @@
 
        function displayOutput(data){
            avatarImg = `
-                <img src="${rootPath}/controller/uploads/${data[0].avatar}" width="200" />
+                <img src="${rootPath}/controller/uploads/${data[0].avatar}" class="img-thumbnail rounded-circle" width="200" />
            `
            document.getElementById("avatarImage").innerHTML = avatarImg;
            document.getElementById("firstname").value = data[0].firstname;
