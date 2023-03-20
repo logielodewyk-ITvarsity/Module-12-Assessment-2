@@ -3,6 +3,8 @@
         <meta charset="UTF-8">
         <title></title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href="fontAwesome/css/all.css" rel="stylesheet">
     </head>
     <body onload="fetchContacts()" >
         <div id="table">Contacts loading...</div>
@@ -33,10 +35,10 @@ function displayOutput(data){
 
         for(a in data){
             output += `
-               <tr onclick="editContact(${data[a].id})">
-                   <td><img src="${rootPath}controller/uploads/${data[a].avatar}" width="100"/></td>
-                   <td><h5>${data[a].firstname}</h5></td>
-                   <td><h5>${data[a].lastname}</h5></td>
+        <tr onclick="editContact(${data[a].id})">
+                <td><img src="${rootPath}controller/uploads/${data[a].avatar}" class="img-thumbnail rounded-circle" width="100"/></td>
+            <td><h5>${data[a].firstname}</h5></td>
+        <td><h5>${data[a].lastname}</h5></td>
             </tr>
             `
         }
